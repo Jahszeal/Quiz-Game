@@ -1,0 +1,237 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: url(../images/bg-img.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.container {
+  text-align: center;
+  padding: 50px;
+  transition: .3s ease;
+  pointer-events: auto;
+}
+
+.container.active{
+  filter: blur(15px);
+  pointer-events: none;
+}
+
+h1 {
+  font-size: 78px;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  color: white;
+}
+
+p {
+  font-size: 25px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+.btn {
+  font-size: 1.5em;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #682a00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #018665;
+}
+
+.notification {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    background: #c5a804;
+    border-radius: 6px;
+    padding: 10px 25px;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease;   
+}
+
+.notification.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.notification h2{
+    font-size: 50px;
+}
+
+.notification .rules {
+    font-size: 16px;
+    display: inline-block;
+    font-weight: 500;
+    margin: 4px 0;
+}
+
+.notification .btn-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 15px 0 7px;
+}
+
+.notification .btn-group .rules-btn {
+    width: 130px;
+    height: 45px;
+    background: #a6b809b7;
+    border: 2px solid #a6b809b7;
+    outline: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: .5s;
+}
+
+.notification .btn-group .rules-btn:nth-child(1) {
+    background: #df2707;
+    color: #fff;
+}
+
+.notification .btn-group .rules-btn:nth-child(1):hover {
+    background: #df2707;
+    color: white;
+}
+
+.notification .btn-group .rules-btn:nth-child(2) {
+    background: #23af07;
+    color: #fff;
+}
+
+.notification .btn-group .rules-btn:nth-child(2):hover {
+    background: #23af07;
+    color: #fff;
+
+}@media (max-width: 1200px) {
+    h1 {
+      font-size: 3em;
+    }
+    
+    p {
+      font-size: 1.25em;
+    }
+    
+    .btn {
+      font-size: 1.25em;
+      padding: 8px 16px;
+    }
+  
+    .notification {
+      width: 80%;
+    }
+  
+    .notification h2 {
+      font-size: 1.75em;
+    }
+  
+    .notification .rules {
+      font-size: 0.9em;
+    }
+  
+    .notification .btn-group .rules-btn {
+      font-size: 0.9em;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.5em;
+    }
+    
+    p {
+      font-size: 1.1em;
+    }
+    
+    .btn {
+      font-size: 1.1em;
+      padding: 6px 12px;
+    }
+  
+    .notification {
+      width: 90%;
+    }
+  
+    .notification h2 {
+      font-size: 1.5em;
+    }
+  
+    .notification .rules {
+      font-size: 0.8em;
+    }
+  
+    .notification .btn-group .rules-btn {
+      font-size: 0.8em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 2em;
+    }
+    
+    p {
+      font-size: 1em;
+    }
+    
+    .btn {
+      font-size: 1em;
+      padding: 5px 10px;
+    }
+  
+    .notification {
+      width: 100%;
+    }
+  
+    .notification h2 {
+      font-size: 1.25em;
+    }
+  
+    .notification .rules {
+      font-size: 0.7em;
+    }
+  
+    .notification .btn-group {
+      flex-direction: column;
+      gap: 8px;
+    }
+  
+    .notification .btn-group .rules-btn {
+      font-size: 0.7em;
+    }
+  }
+
+
+
